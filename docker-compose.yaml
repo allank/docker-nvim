@@ -1,0 +1,12 @@
+version: '3'
+services:
+  docker-nvim:
+    image: docker-nvim:0.4
+    stdin_open: true
+    tty: true
+    container_name: docker-nvim
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/data
